@@ -1,4 +1,4 @@
-# ml-responder (nombre en clave)
+# contestador-ia (nombre en clave)
 
 > Este README es el **contexto maestro** del proyecto. Si sos una IA ayudando a programar: leelo completo antes de escribir código, respetá las secciones "Reglas para asistentes de IA" y "Restricciones", y ante la duda preguntá en vez de asumir.
 >
@@ -293,7 +293,7 @@ Como la PC no está siempre encendida, **el job de reconciliación es obligatori
 ## 10. Estructura de carpetas propuesta
 
 ```
-ml-responder/
+contestador-ia/
 ├── README.md
 ├── .env.example
 ├── package.json
