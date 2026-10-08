@@ -1,0 +1,27 @@
+# Local Postgres for development. Zero cost.
+# Usage:
+#   docker compose up -d
+#   npm run migrate
+#   npm run dev
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: contestador-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: contestador
+      POSTGRES_PASSWORD: contestador
+      POSTGRES_DB: contestador
+    ports:
+      - "5432:5432"
+    volumes:
+      - contestador_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U contestador -d contestador"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  contestador_pgdata:
